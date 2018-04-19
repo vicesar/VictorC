@@ -9,7 +9,7 @@
     var senha = 'cielo2212';
 
 
-    //Elementos da Page
+    //Elementos
     var campoEC = element(by.id('estabilishmentNumber'));
     var btAcessar = element(by.id('btContinue'));
     var campoSenha = element(by.id('password'));
@@ -17,7 +17,7 @@
     var btMenu = $('.icon.header-icon-menu');
 
     
-    //Métodos da Page
+    //Métodos
 
     //Acessa página da Cielo
     function Navigate() {
@@ -36,7 +36,7 @@
 
     function OnPrepare(status) {
         browser.ignoreSynchronization = status;
-    }
+    };
 
 
     module.exports = {

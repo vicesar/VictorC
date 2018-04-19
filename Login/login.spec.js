@@ -1,4 +1,4 @@
-// // login.spec.js
+// login.spec.js
 
 var LoginPO = require('./login.po.js');
 var Helpers = require('../helpers.po.js');
@@ -31,6 +31,8 @@ describe('Login', function () {
 
         //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
+        
+        LoginPO.OnPrepare(false);
     });
 
 
