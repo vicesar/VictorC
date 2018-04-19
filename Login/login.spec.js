@@ -6,7 +6,6 @@ var Helpers = require('../helpers.po.js');
 
 describe('Login', function () {
 
-
     it('Acessar a página', function () {
         LoginPO.Navigate();
 
@@ -21,7 +20,6 @@ describe('Login', function () {
 
         //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(LoginPO.campoSenha), 10000);
-
         LoginPO.FillSenha();
         LoginPO.btEntrar.click();
 
@@ -29,7 +27,7 @@ describe('Login', function () {
         browser.wait(Helpers.EC.presenceOf(LoginPO.btMenu), 50000);
 
         //"Desligando" o angular
-        LoginPO.OnPrepare(false);
+        LoginPO.OnPrepare(true);
 
         //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');

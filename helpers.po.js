@@ -1,11 +1,14 @@
+//helpers.po.js
+
 (function Helpers() {
+    //Protractor
     var EC = protractor.ExpectedConditions;
 
+    
     module.exports = {
-        //Variáveis
-        EC: EC,
-    }
+        //Váriaveis
+        EC:EC
+    };
 
 
-
-});
+})();

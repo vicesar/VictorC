@@ -2,12 +2,12 @@
 
 (function LoginPO() {
     'use strict';
+
     //Variáveis
     var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
     var numEC = '1039170517';
     var senha = 'cielo2212';
 
-    //Protractor
 
     //Elementos da Page
     var campoEC = element(by.id('estabilishmentNumber'));
@@ -16,6 +16,7 @@
     var btEntrar = element(by.id('btAction'));
     var btMenu = $('.icon.header-icon-menu');
 
+    
     //Métodos da Page
 
     //Acessa página da Cielo
@@ -39,6 +40,9 @@
 
 
     module.exports = {
+        //Váriaveis
+
+
         //Elementos
         btAcessar: btAcessar,
         campoSenha: campoSenha,
