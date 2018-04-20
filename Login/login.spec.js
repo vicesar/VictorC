@@ -4,7 +4,7 @@ var LoginPO = require('./login.po.js');
 var Helpers = require('../helpers.po.js');
 
 
-fdescribe('Login', function () {
+describe('Login', function () {
 
     it('Acessar a página', function () {
         LoginPO.Navigate();
