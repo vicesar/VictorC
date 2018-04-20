@@ -5,8 +5,6 @@
 
     //Variáveis
     var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
-    var numEC = '1039170517';
-    var senha = 'cielo2212';
 
 
     //Elementos
@@ -25,12 +23,12 @@
     };
 
     //Preenche o campo número estabelecimento
-    function FillEc() {
+    function FillEc(numEC) {
         campoEC.sendKeys(numEC);
     };
 
     //Preenche o campo senah
-    function FillSenha() {
+    function FillSenha(senha) {
         campoSenha.sendKeys(senha);
     };
 

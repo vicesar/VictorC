@@ -4,7 +4,7 @@ var LoginPO = require('./login.po.js');
 var Helpers = require('../helpers.po.js');
 
 
-describe('Login', function () {
+fdescribe('Login', function () {
 
     it('Acessar a página', function () {
         LoginPO.Navigate();
@@ -15,12 +15,12 @@ describe('Login', function () {
 
     it('Realizar login com sucesso', function () {
         LoginPO.Navigate();
-        LoginPO.FillEc();
+        LoginPO.FillEc('1039170517');
         LoginPO.btAcessar.click();
 
         //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(LoginPO.campoSenha), 10000);
-        LoginPO.FillSenha();
+        LoginPO.FillSenha('cielo2212');
         LoginPO.btEntrar.click();
 
         //Aguarda a presença do ícone do menu lateral
@@ -31,8 +31,6 @@ describe('Login', function () {
 
         //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
-        
-        LoginPO.OnPrepare(false);
     });
 
 
