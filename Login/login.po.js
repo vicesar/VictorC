@@ -13,6 +13,10 @@
     var campoSenha = element(by.id('password'));
     var btEntrar = element(by.id('btAction'));
     var btMenu = $('.icon.header-icon-menu');
+    var checkRegulamento = $$('.ng-tns-c13-1').get(3);
+    var btPreencha = $('.btn.stroke');
+    var btPronto = $('.btn.submit.stroke');
+    var btVamos = $('.btn.full-green');
 
     
     //Métodos
@@ -46,6 +50,10 @@
         campoSenha: campoSenha,
         btEntrar: btEntrar,
         btMenu: btMenu,
+        checkRegulamento: checkRegulamento,
+        btPreencha: btPreencha,
+        btPronto: btPronto,
+        btVamos: btVamos,
 
 
         //Métodos
