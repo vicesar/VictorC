@@ -1,4 +1,7 @@
 //login.po.js
+var Helpers = require('../helpers.po');
+var Home = require('../Home/home.po');
+
 
 (function LoginPO() {
     'use strict';
@@ -10,13 +13,12 @@
     //Elementos
     var campoEC = element(by.id('estabilishmentNumber'));
     var btAcessar = element(by.id('btContinue'));
-    var campoSenha = element(by.id('password'));
-    var btEntrar = element(by.id('btAction'));
-    var btMenu = $('.icon.header-icon-menu');
     var checkRegulamento = $$('.ng-tns-c13-1').get(3);
     var btPreencha = $('.btn.stroke');
     var btPronto = $('.btn.submit.stroke');
     var btVamos = $('.btn.full-green');
+    var btFechar = $('.text-link');
+
 
     
     //Métodos
@@ -31,10 +33,15 @@
         campoEC.sendKeys(numEC);
     };
 
-    //Preenche o campo senah
-    function FillSenha(senha) {
-        campoSenha.sendKeys(senha);
+    //Preenche o campo número estabelecimento
+    function Logout() {
+        browser.sleep(3000);
+        Home.btMenu.click();
+        browser.sleep(3000);
+        Home.btSair.click();
+        browser.sleep(3000);
     };
+    
 
     function OnPrepare(status) {
         browser.ignoreSynchronization = status;
@@ -47,19 +54,20 @@
 
         //Elementos
         btAcessar: btAcessar,
-        campoSenha: campoSenha,
-        btEntrar: btEntrar,
-        btMenu: btMenu,
+        campoEC: campoEC,
+        //btMenu: btMenu,
         checkRegulamento: checkRegulamento,
         btPreencha: btPreencha,
         btPronto: btPronto,
         btVamos: btVamos,
+        btFechar: btFechar,
 
 
         //Métodos
         Navigate: Navigate,
         FillEc: FillEc,
-        FillSenha: FillSenha,
+        Logout: Logout,
+
         OnPrepare: OnPrepare,
     };
 
