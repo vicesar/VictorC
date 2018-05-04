@@ -9,7 +9,7 @@ var Helpers = require('../helpers.po.js');
 
 
 
-fdescribe('Login', function () {
+describe('Login', function () {
 
 
     it('Acessar a página', function () {
@@ -21,12 +21,12 @@ fdescribe('Login', function () {
 
     it('Realizar login com sucesso', function () {
         LoginPO.Navigate();
-        LoginPO.FillEc('1039170517');
+        LoginPO.FillEc(LoginPO.usuarioCPontos);
         LoginPO.btAcessar.click();
 
         //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha('cielo2212');
+        Senha.FillSenha(LoginPO.senhaCPontos);
         Senha.btEntrar.click();
 
         //Aguarda a presença do ícone do menu lateral
@@ -49,13 +49,13 @@ fdescribe('Login', function () {
     it('Realizar primeiro acesso com sucesso', function () {
         LoginPO.Navigate();
         browser.wait(Helpers.EC.presenceOf(LoginPO.campoEC), 10000);
-        LoginPO.FillEc('1212121304');
+        LoginPO.FillEc(LoginPO.usuarioSPontos);
         LoginPO.btAcessar.click();
 
 
         //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 100000);
-        Senha.FillSenha('cielo@10');
+        Senha.FillSenha(LoginPO.senhaSPontos);
         Senha.btEntrar.click();
 
         //Aguarda a presença do checkbox de Li e Concordo com o Regulamento e clicar no botão

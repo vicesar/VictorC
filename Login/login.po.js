@@ -1,5 +1,4 @@
 //login.po.js
-var Helpers = require('../helpers.po');
 var Home = require('../Home/home.po');
 
 
@@ -8,6 +7,10 @@ var Home = require('../Home/home.po');
 
     //Variáveis
     var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
+    var usuarioCPontos = '1039170517';
+    var senhaCPontos = 'cielo2212';
+    var usuarioSPontos = '1212121304';
+    var senhaSPontos = 'cielo@10';
 
 
     //Elementos
@@ -20,7 +23,6 @@ var Home = require('../Home/home.po');
     var btFechar = $('.text-link');
 
 
-    
     //Métodos
 
     //Acessa página da Cielo
@@ -50,6 +52,11 @@ var Home = require('../Home/home.po');
 
     module.exports = {
         //Váriaveis
+        usuarioCPontos: usuarioCPontos,
+        senhaCPontos: senhaCPontos,
+        usuarioSPontos: usuarioSPontos,
+        senhaSPontos: senhaSPontos,
+
 
 
         //Elementos

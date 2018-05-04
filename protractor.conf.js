@@ -12,12 +12,14 @@ exports.config = {
     specs: [
         './Login/*.spec.js',
         './Falegente/*.spec.js',
+        './Meucadastro/*.spec.js',
     ],
     //Define quais suítes de testes serão testadas
     //suites: suites,
     suites: {
         login: './Login/*.spec.js',
         falegente: './Falegente/*.spec.js',
+        meucadastro: './Meucadastro/*.spec.js',
     },
     //para Angular 2
     useAllAngular2AppRoots: true,
