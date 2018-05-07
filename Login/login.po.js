@@ -1,5 +1,6 @@
 //login.po.js
 var Home = require('../Home/home.po');
+var Helpers = require('../helpers.po.js');
 
 
 (function LoginPO() {
@@ -21,6 +22,7 @@ var Home = require('../Home/home.po');
     var btPronto = $('.btn.submit.stroke');
     var btVamos = $('.btn.full-green');
     var btFechar = $('.text-link');
+    var headerLogin = $('.center.flexbox-rowwrap');
 
 
     //Métodos
@@ -28,6 +30,7 @@ var Home = require('../Home/home.po');
     //Acessa página da Cielo
     function Navigate() {
         browser.get(acessoLogin);
+        browser.wait(Helpers.EC.presenceOf(headerLogin), 10000);
     };
 
     //Preenche o campo número estabelecimento

@@ -12,6 +12,9 @@ var campoDataNasc = element(by.id('date'));
 var btnSalvar = $('.btn.stroke.gray');
 var btnFechar = element(by.id('closeModal'));
 var campoNumero = element(by.id('numer0'));
+var campoNomeT = $$('.input.ng-untouched.ng-pristine').get(9);
+var campoNome = $$('.input.ng-untouched.ng-pristine').get(0);
+var modal = $$('.md-content').get(1);
 
 
 (function MeuCadastro() {
@@ -43,6 +46,9 @@ var campoNumero = element(by.id('numer0'));
         btnSalvar: btnSalvar,
         btnFechar: btnFechar,
         btnDadosC: btnDadosC,
+        campoNomeT: campoNomeT,
+        campoNome: campoNome,
+        modal: modal,
 
 
         //Metodos
