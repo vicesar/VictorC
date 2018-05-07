@@ -8,14 +8,19 @@ var MeuCadastro = require('../MeuCadastro/meucadastro.po.js');
 
 
 
-fdescribe('MeuCadastro', function () {
+describe('MeuCadastro', function () {
 
-    fit('Alterar Dados Pessoais do participante', function () {
+    it('Alterar Dados Pessoais do participante', function () {
+        // "Ligando" o angular
+        LoginPO.OnPrepare(false);
+    
+        
         // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioCPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
+        // browser.sleep(5000);
         Senha.FillSenha(LoginPO.senhaCPontos);
         Senha.btEntrar.click();
 
@@ -52,7 +57,7 @@ fdescribe('MeuCadastro', function () {
     });
 
 
-    fit('Alterar Dados Comerciais do participante', function () {
+    it('Alterar Dados Comerciais do participante', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
         

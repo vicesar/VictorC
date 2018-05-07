@@ -20,11 +20,10 @@ describe('Login', function () {
     });
 
     it('Realizar login com sucesso', function () {
+        // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioCPontos);
         LoginPO.btAcessar.click();
-
-        //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
         Senha.FillSenha(LoginPO.senhaCPontos);
         Senha.btEntrar.click();
