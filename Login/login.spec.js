@@ -37,15 +37,17 @@ describe('Login', function () {
         //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
 
-        
+
         //Realiza logout do site
         LoginPO.Logout();
-        //"Ligando" o angular
-        LoginPO.OnPrepare(false);
+
 
     });
 
     it('Realizar primeiro acesso com sucesso', function () {
+        //"Ligando" o angular
+        LoginPO.OnPrepare(false);
+
         LoginPO.Navigate();
         browser.wait(Helpers.EC.presenceOf(LoginPO.campoEC), 10000);
         LoginPO.FillEc(LoginPO.usuarioSPontos);

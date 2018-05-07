@@ -67,7 +67,6 @@ describe('MeuCadastro', function () {
         LoginPO.FillEc(LoginPO.usuarioCPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        // browser.sleep(5000);
         Senha.FillSenha(LoginPO.senhaCPontos);
         Senha.btEntrar.click();
 
@@ -90,8 +89,15 @@ describe('MeuCadastro', function () {
         MeuCadastro.FillNumero(MeuCadastro.numero);
         MeuCadastro.btnSalvar.click();
 
-        // Espera que apresente o botão "Fechar" do modal de sucesso
+        // Aguarda carregar modal e espera que apresente o botão "Fechar" do modal de sucesso
+        browser.wait(Helpers.EC.visibilityOf(MeuCadastro.modal), 50000);
         expect(MeuCadastro.btnFechar.isPresent()).toBe(true);
+
+        //Clica no botão "Fechar"
+        MeuCadastro.btnFechar.click();
+
+        //Realizar "Logout"
+        LoginPO.Logout();
     });
 
 
