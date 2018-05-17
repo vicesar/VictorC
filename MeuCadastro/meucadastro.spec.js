@@ -20,7 +20,6 @@ describe('MeuCadastro', function () {
         LoginPO.FillEc(LoginPO.usuarioCPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        // browser.sleep(5000);
         Senha.FillSenha(LoginPO.senhaCPontos);
         Senha.btEntrar.click();
 
