@@ -1,5 +1,3 @@
-//login.po.js
-
 (function SenhaPO() {
     'use strict';
 

@@ -1,5 +1,3 @@
-//falegente.po.js
-
 (function FaleGente() {
     'use strict';
 

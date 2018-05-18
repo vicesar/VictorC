@@ -1,5 +1,3 @@
-// login.spec.js
-
 var LoginPO = require('./login.po.js');
 var Senha = require('../Login/senha.po.js');
 var Home = require('../Home/home.po.js')
@@ -80,7 +78,7 @@ describe('Login', function () {
         LoginPO.btFechar.click();
 
         //Aguarda a presença do ícone do menu lateral e espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
-        browser.wait(Helpers.EC.presenceOf(Home.btMenu), 50000);
+        browser.wait(Helpers.EC.urlIs('http://cielofidelidadedev.azurewebsites.net/dashboard'), 50000);
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
 
         //Realiza logout do site

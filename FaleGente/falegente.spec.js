@@ -1,5 +1,3 @@
-//falegente.spec.js
-
 var FaleGente = require('../FaleGente/falegente.po.js');
 var LoginPO = require('../Login/login.po');
 var Helpers = require('../helpers.po.js');

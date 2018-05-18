@@ -14,6 +14,7 @@ exports.config = {
         './Falegente/*.spec.js',
         './Meucadastro/*.spec.js',
         './Meuspontos/*.spec.js',
+        './Simuladorpontos/*.spec.js'
     ],
     //Define quais suítes de testes serão testadas
     //suites: suites,
@@ -22,6 +23,7 @@ exports.config = {
         falegente: './Falegente/*.spec.js',
         meucadastro: './Meucadastro/*.spec.js',
         meuspontos: './Meuspontos/*.spec.js',
+        simuladorpontos: './Simuladorpontos/*.spec.js',
     },
     //para Angular 2
     useAllAngular2AppRoots: true,

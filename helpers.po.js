@@ -1,5 +1,3 @@
-//helpers.po.js
-
 (function Helpers() {
     //Protractor
     var EC = protractor.ExpectedConditions;

@@ -1,5 +1,3 @@
-//meucadastro.spec.js
-
 var LoginPO = require('../Login/login.po.js');
 var Home = require('../Home/home.po.js');
 var Helpers = require('../helpers.po.js');
@@ -43,7 +41,6 @@ describe('MeuCadastro', function () {
         MeuCadastro.btnSalvar.click();
 
         
-
         // Aguarda carregar modal e espera que apresente o botão "Fechar" do modal de sucesso
         browser.wait(Helpers.EC.visibilityOf(MeuCadastro.modal), 50000);
         expect(MeuCadastro.btnFechar.isPresent()).toBe(true);
@@ -81,10 +78,10 @@ describe('MeuCadastro', function () {
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
         MeuCadastro.linkCadastro.click();
 
-        // Aguarda a presença o botão de "Dados Pessoais" e clica - Alterar campo data de nascimento e Salva
+        // Aguarda a presença o botão de "Dados Comerciais" e clica - Alterar campo Numero e Salva
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.btnDadosP), 50000);
         MeuCadastro.btnDadosC.click();
-        browser.wait(Helpers.EC.presenceOf(MeuCadastro.campoNomeT), 50000);
+        browser.wait(Helpers.EC.visibilityOf(MeuCadastro.campoNomeT), 50000);
         MeuCadastro.FillNumero(MeuCadastro.numero);
         MeuCadastro.btnSalvar.click();
 

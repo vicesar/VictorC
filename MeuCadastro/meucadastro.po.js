@@ -1,5 +1,3 @@
-//meucadastro.po.js
-
 //Variaveis
 var dataNasc = '02/02/1980'
 var numero = '17'
@@ -56,6 +54,4 @@ var modal = $$('.md-content').get(1);
         FillNumero: FillNumero,
 
     };
-
-    
 })();
