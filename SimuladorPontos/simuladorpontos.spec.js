@@ -29,11 +29,11 @@ describe('SimuladorPontos', function () {
         browser.sleep(8000);
         Home.btMenu.click();
 
-        // Aguarda a presença do link de "Meu cadastro" e clica
+        // Aguarda a presença do link de "Meu cadastro" e clica em "Simulador de pontos"
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
         Home.linkSimulador.click();
-        
-        
+
+
         // Espera a div principal da tela
         browser.wait(Helpers.EC.visibilityOf(Simulador.divSimuladorPontos), 50000);
         expect(Simulador.divSimuladorPontos.isPresent()).toBe(true);
@@ -65,8 +65,8 @@ describe('SimuladorPontos', function () {
         // Aguarda a presença do link de "Meu cadastro" e clica
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
         Home.linkSimulador.click();
-        
-        
+
+
         // Aguarda a div principal da tela e realiza simulação de pontos com o valor de vendas
         browser.wait(Helpers.EC.visibilityOf(Simulador.divSimuladorPontos), 50000);
         Simulador.FillValores(Simulador.valor1, Simulador.valor2);
