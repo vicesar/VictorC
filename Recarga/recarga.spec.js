@@ -1,19 +1,18 @@
 var LoginPO = require('../Login/login.po.js');
 var Senha = require('../Login/senha.po.js');
-var Home = require('../Home/home.po.js')
+var Home = require('../Home/home.po.js');
 var Helpers = require('../helpers.po.js');
 var Listagem = require('../ListagemOferta/listagemoferta.po.js');
+var Recarga = require('../Recarga/recarga.po.js');
 
 
 
 
 
-describe('ListagemOferta', function () {
+describe('Recarga', function () {
 
-    it('Carregar pagina', function () {
-        //"Ligando" o angular
-        LoginPO.OnPrepare(false);
 
+    it('Contratar a oferta', function () {
         // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioCPontos);
@@ -29,9 +28,18 @@ describe('ListagemOferta', function () {
         browser.sleep(10000);
         Home.btOferta.click();
 
-        //Espera que tenha card
-        browser.wait(Helpers.EC.presenceOf(Listagem.card), 10000);
-        expect(Listagem.card.isPresent()).toBe(true);
+        //
+        browser.wait(Helpers.EC.presenceOf(Listagem.recarga), 10000);
+        Listagem.recarga.click();
+        
+
+        browser.wait(Helpers.EC.visibilityOf(Recarga.video), 10000);
+        Recarga.contratar.click();
+        
+        browser.wait(Helpers.EC.visibilityOf(Recarga.fechar), 10000);
+        expect(Recarga.fechar.isPresent()).toBe(true);
+
+        Recarga.fechar.click();
 
     });
 
