@@ -16,7 +16,8 @@ var Helpers = require('../helpers.po.js');
     //Elementos
     var campoEC = element(by.id('estabilishmentNumber'));
     var btAcessar = element(by.id('btContinue'));
-    var checkRegulamento = $$('.ng-tns-c13-1').get(3);
+    //var checkRegulamento = $$('.ng-tns-c13-1').get(3);
+    var checkRegulamento = element(by.css("label[for='regulamento']"));
     var btPreencha = $('.btn.stroke');
     var btPronto = $('.btn.submit.stroke');
     var btVamos = $('.btn.full-green');

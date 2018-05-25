@@ -57,8 +57,9 @@ describe('Login', function () {
         Senha.FillSenha(LoginPO.senhaSPontos);
         Senha.btEntrar.click();
 
+        
         //Aguarda a presença do checkbox de Li e Concordo com o Regulamento e clicar no botão
-        browser.wait(Helpers.EC.presenceOf(LoginPO.checkRegulamento), 50000);
+        browser.wait(Helpers.EC.visibilityOf(LoginPO.checkRegulamento), 50000);
         LoginPO.checkRegulamento.click();
         LoginPO.btPreencha.click();
 
@@ -83,7 +84,6 @@ describe('Login', function () {
 
         //Realiza logout do site
         LoginPO.Logout();
-
     });
 
 

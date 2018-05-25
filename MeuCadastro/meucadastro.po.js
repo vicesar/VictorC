@@ -4,8 +4,8 @@ var numero = '17'
 
 //Elementos
 var linkCadastro = element(by.linkText('Meu cadastro'));
-var btnDadosP = $$('.my-register-button.flexbox-rowwrap').get(0);
-var btnDadosC = $$('.my-register-button.flexbox-rowwrap').get(1);
+var btnDadosP = element(by.id('personalData'));
+var btnDadosC = element(by.id('businessData'));
 var campoDataNasc = element(by.id('date'));
 var btnSalvar = $('.btn.stroke.gray');
 var btnFechar = element(by.id('closeModal'));
