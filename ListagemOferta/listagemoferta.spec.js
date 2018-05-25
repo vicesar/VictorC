@@ -8,9 +8,9 @@ var Listagem = require('../ListagemOferta/listagemoferta.po.js');
 
 
 
-fdescribe('ListagemOferta', function () {
+describe('ListagemOferta', function () {
 
-    fit('Carregar pagina', function () {
+    it('Carregar pagina', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 
@@ -24,8 +24,12 @@ fdescribe('ListagemOferta', function () {
 
         //"Desligando" o angular
         LoginPO.OnPrepare(true);
+
+        //Abre tela de Ofertas
         browser.sleep(10000);
         Home.btOferta.click();
+
+        //Espera que tenha card
         browser.wait(Helpers.EC.presenceOf(Listagem.card), 10000);
         expect(Listagem.card.isPresent()).toBe(true);
         
