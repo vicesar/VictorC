@@ -11,6 +11,7 @@
     var contratar = element(by.id('saveContract00'));
     var checkLi = element(by.css("label[for='relevancia']"));
     var btcontinuar = element(by.id('btnSaveOffer'));
+    var btfechar = element(by.id('closeModal'));
 
 
     //Métodos
@@ -26,7 +27,7 @@
         contratar: contratar,
         checkLi: checkLi,
         btcontinuar: btcontinuar,
-        
+        btfechar: btfechar,
 
         //Métodos
        

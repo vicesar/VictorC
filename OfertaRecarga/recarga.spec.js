@@ -36,10 +36,11 @@ describe('Recarga', function () {
         browser.wait(Helpers.EC.visibilityOf(Recarga.video), 10000);
         Recarga.contratar.click();
         
-        //Aguarda carregar classe do modal de sucesso e clica em fechar
+        //Espera que carregue o botao Fechar do modal de sucesso
         browser.wait(Helpers.EC.visibilityOf(Recarga.fechar), 10000);
         expect(Recarga.fechar.isPresent()).toBe(true);
 
+        //Clicar no botao Fechar do modal de sucesso
         Recarga.fechar.click();
 
         // "Deslogar"

@@ -9,10 +9,10 @@ var Farol = require('../OfertaFarol/farol.po.js');
 
 
 
-fdescribe('Farol', function () {
+describe('Farol', function () {
 
 
-    fit('Contratar a oferta', function () {
+    it('Contratar a oferta', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 
@@ -51,7 +51,17 @@ fdescribe('Farol', function () {
         //Aguarda botao Continuar estar habilitado
         browser.wait(Helpers.EC.elementToBeClickable(Farol.btcontinuar), 10000);
         Farol.btcontinuar.click();
-        browser.sleep(50000);
+       
+        //Espera carregar botao fechar de modal de sucesso
+        browser.wait(Helpers.EC.visibilityOf(Farol.btfechar), 10000);
+        expect(Farol.btfechar.isPresent()).toBe(true);
+
+        //Clicar no botao Fechar do modal
+        Farol.btfechar.click();
+
+        //Realiza logout do site
+        LoginPO.Logout();
+        
     });
 
 
