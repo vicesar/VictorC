@@ -2,7 +2,6 @@
     'use strict';
 
     //Variáveis
-    // var contratar = element(by.id('btnHire'));
     var contratar = $$('.btn.full-green.recharge-btn').get(0);
     var video = $('.play-video');
     var fechar = element(by.id('closeModal'));

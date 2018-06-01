@@ -8,6 +8,7 @@
     //Elementos
     var card = $('.card-business.offer');
     var recarga = element(by.css('a[href*="/dashboard/ofertas/1021/recarga-de-telefones"]'));
+    var farol = element(by.css('a[href*="/dashboard/ofertas/1018/cielo-farol"]'));
 
 
     //Métodos
@@ -21,6 +22,7 @@
         //Elementos
         card: card,
         recarga: recarga,
+        farol: farol,
 
         //Métodos
      

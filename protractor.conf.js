@@ -17,7 +17,8 @@ exports.config = {
         './Simuladorpontos/*.spec.js',
         './Descontomaquina/*.spec.js',
         './Listagemoferta/*.spec.js',
-        './Recarga/*.spec.js',
+        './OfertaRecarga/*.spec.js',
+        './OfertaFarol/*.spec.js',
     ],
     //Define quais suítes de testes serão testadas
     //suites: suites,
@@ -29,7 +30,8 @@ exports.config = {
         simuladorpontos: './Simuladorpontos/*.spec.js',
         descontomaquina: './Descontomaquina/*.spec.js',
         listagemoferta: './Listagemoferta/*.spec.js',
-        recarga: './Recarga/*.spec.js',
+        ofertarecarga: './OfertaRecarga/*.spec.js',
+        ofertafarol: './OfertaFarol/*.spec.js',
     },
     //para Angular 2
     useAllAngular2AppRoots: true,

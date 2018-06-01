@@ -33,6 +33,8 @@ describe('ListagemOferta', function () {
         browser.wait(Helpers.EC.presenceOf(Listagem.card), 10000);
         expect(Listagem.card.isPresent()).toBe(true);
 
+        // "Deslogar"
+        LoginPO.Logout();
     });
 
 

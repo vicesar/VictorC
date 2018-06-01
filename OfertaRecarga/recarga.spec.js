@@ -3,7 +3,7 @@ var Senha = require('../Login/senha.po.js');
 var Home = require('../Home/home.po.js');
 var Helpers = require('../helpers.po.js');
 var Listagem = require('../ListagemOferta/listagemoferta.po.js');
-var Recarga = require('../Recarga/recarga.po.js');
+var Recarga = require('../OfertaRecarga/recarga.po.js');
 
 
 
@@ -28,18 +28,22 @@ describe('Recarga', function () {
         browser.sleep(10000);
         Home.btOferta.click();
 
-        //
+        //Aguarda carregamento do botão para contratar oferta e clica
         browser.wait(Helpers.EC.presenceOf(Listagem.recarga), 10000);
         Listagem.recarga.click();
         
-
+        //Aguarda carregamento da classe de video e clica em Contratar
         browser.wait(Helpers.EC.visibilityOf(Recarga.video), 10000);
         Recarga.contratar.click();
         
+        //Aguarda carregar classe do modal de sucesso e clica em fechar
         browser.wait(Helpers.EC.visibilityOf(Recarga.fechar), 10000);
         expect(Recarga.fechar.isPresent()).toBe(true);
 
         Recarga.fechar.click();
+
+        // "Deslogar"
+        LoginPO.Logout();
 
     });
 
