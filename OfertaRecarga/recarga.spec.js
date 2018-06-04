@@ -29,7 +29,7 @@ describe('Recarga', function () {
         Home.btOferta.click();
 
         //Aguarda carregamento do botão para contratar oferta e clica
-        browser.wait(Helpers.EC.presenceOf(Listagem.recarga), 10000);
+        browser.wait(Helpers.EC.visibilityOf(Listagem.recarga), 10000);
         Listagem.recarga.click();
         
         //Aguarda carregamento da classe de video e clica em Contratar

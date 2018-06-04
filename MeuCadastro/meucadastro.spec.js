@@ -26,7 +26,7 @@ describe('MeuCadastro', function () {
 
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(8000);
+        browser.sleep(10000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica
@@ -71,7 +71,7 @@ describe('MeuCadastro', function () {
 
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(8000);
+        browser.sleep(10000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica

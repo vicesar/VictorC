@@ -8,7 +8,7 @@ var Simulador = require('../SimuladorPontos/simuladorpontos.po.js');
 
 
 
-describe('SimuladorPontos', function () {
+fdescribe('SimuladorPontos', function () {
 
     it('Carregar tela de simulador de pontos', function () {
         // "Ligando" o angular
@@ -26,7 +26,7 @@ describe('SimuladorPontos', function () {
         LoginPO.OnPrepare(true);
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(8000);
+        browser.sleep(10000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica em "Simulador de pontos"
@@ -59,7 +59,7 @@ describe('SimuladorPontos', function () {
         LoginPO.OnPrepare(true);
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(8000);
+        browser.sleep(10000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica
