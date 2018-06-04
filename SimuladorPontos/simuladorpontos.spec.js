@@ -8,7 +8,7 @@ var Simulador = require('../SimuladorPontos/simuladorpontos.po.js');
 
 
 
-fdescribe('SimuladorPontos', function () {
+describe('SimuladorPontos', function () {
 
     it('Carregar tela de simulador de pontos', function () {
         // "Ligando" o angular
