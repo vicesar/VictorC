@@ -9,7 +9,7 @@ var Farol = require('../OfertaFarol/farol.po.js');
 
 
 
-describe('Farol', function () {
+fdescribe('Farol', function () {
 
 
     it('Contratar a oferta', function () {
@@ -33,16 +33,16 @@ describe('Farol', function () {
         Home.btOferta.click();
 
         //Aguarda carregamento do botão para contratar oferta e clica
-        browser.wait(Helpers.EC.presenceOf(Listagem.farol), 10000);
+        browser.wait(Helpers.EC.visibilityOf(Listagem.farol), 10000);
         Listagem.farol.click();
         
         //Aguarda carregar classe de video e clica em conheca os planos
         browser.sleep(10000);
-        Farol.planos.click();
+        Farol.btplanos.click();
         
         //Aguarda presenca de botao de contrata agora e clica
-        browser.wait(Helpers.EC.elementToBeClickable(Farol.contratar), 10000);
-        Farol.contratar.click();
+        browser.wait(Helpers.EC.elementToBeClickable(Farol.btcontratar), 10000);
+        Farol.btcontratar.click();
 
         //Aguarda e clicar no checkbox
         browser.wait(Helpers.EC.elementToBeClickable(Farol.checkLi), 10000);

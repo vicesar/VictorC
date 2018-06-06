@@ -1,4 +1,7 @@
 (function Helpers() {
+    var enter = browser.actions().sendKeys(protractor.Key.ENTER);
+
+
     //Protractor
     var EC = protractor.ExpectedConditions;
 
@@ -30,6 +33,7 @@
 
         //Métodos
         SelectWrapper: SelectWrapper,
+        enter: enter,
     };
 
 

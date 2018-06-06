@@ -19,6 +19,7 @@ exports.config = {
         './Listagemoferta/*.spec.js',
         './OfertaRecarga/*.spec.js',
         './OfertaFarol/*.spec.js',
+        './OfertaLio/*.spec.js',
     ],
     //Define quais suítes de testes serão testadas
     //suites: suites,
@@ -32,6 +33,7 @@ exports.config = {
         listagemoferta: './Listagemoferta/*.spec.js',
         ofertarecarga: './OfertaRecarga/*.spec.js',
         ofertafarol: './OfertaFarol/*.spec.js',
+        ofertalio: './OfertaLio/*.spec.js',
     },
     //para Angular 2
     useAllAngular2AppRoots: true,
