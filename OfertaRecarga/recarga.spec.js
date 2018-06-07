@@ -15,10 +15,10 @@ describe('Recarga', function () {
     it('Contratar a oferta', function () {
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioCPontos);
+        LoginPO.FillEc(LoginPO.usuarioLucas);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(LoginPO.senhaCPontos);
+        Senha.FillSenha(Senha.senhaLucas);
         Senha.btEntrar.click();
 
         //"Desligando" o angular
@@ -32,8 +32,8 @@ describe('Recarga', function () {
         browser.wait(Helpers.EC.visibilityOf(Listagem.recarga), 10000);
         Listagem.recarga.click();
         
-        //Aguarda carregamento da classe de video e clica em Contratar
-        browser.wait(Helpers.EC.visibilityOf(Recarga.video), 10000);
+        //Aguarda carregamento e clica em Contratar
+        browser.sleep(12000);
         Recarga.contratar.click();
         
         //Espera que carregue o botao Fechar do modal de sucesso

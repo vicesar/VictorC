@@ -14,10 +14,10 @@ describe('DescontoMaquina', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioCPontos);
+        LoginPO.FillEc(LoginPO.usuarioLucas);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(LoginPO.senhaCPontos);
+        Senha.FillSenha(Senha.senhaLucas);
         Senha.btEntrar.click();
 
         // "Desligando" o angular

@@ -7,10 +7,9 @@ var Helpers = require('../helpers.po.js');
 
     //Variáveis
     var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
-    var usuarioCPontos = '1039170517';
-    var senhaCPontos = 'cielo2212';
+    var usuarioLucas = '1039170517';
     var usuarioSPontos = '1212121304';
-    var senhaSPontos = 'cielo@10';
+    
 
 
     //Elementos
@@ -55,10 +54,8 @@ var Helpers = require('../helpers.po.js');
 
     module.exports = {
         //Váriaveis
-        usuarioCPontos: usuarioCPontos,
-        senhaCPontos: senhaCPontos,
+        usuarioLucas: usuarioLucas,
         usuarioSPontos: usuarioSPontos,
-        senhaSPontos: senhaSPontos,
 
 
 

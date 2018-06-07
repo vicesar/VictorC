@@ -20,10 +20,10 @@ describe('MeusPontos', function () {
         
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioCPontos);
+        LoginPO.FillEc(LoginPO.usuarioLucas);
         LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.visibilityOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(LoginPO.senhaCPontos);
+        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
+        Senha.FillSenha(Senha.senhaLucas);
         Senha.btEntrar.click();
 
         // "Desligando" o angular
@@ -54,10 +54,10 @@ describe('MeusPontos', function () {
         
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioCPontos);
+        LoginPO.FillEc(LoginPO.usuarioLucas);
         LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.visibilityOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(LoginPO.senhaCPontos);
+        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
+        Senha.FillSenha(Senha.senhaLucas);
         Senha.btEntrar.click();
         
         
