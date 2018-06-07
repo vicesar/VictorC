@@ -16,13 +16,12 @@ describe('Farol', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 
-
         //Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
+        LoginPO.FillEc(LoginPO.usuarioSPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
+        Senha.FillSenha(Senha.senhaSPontos);
         Senha.btEntrar.click();
 
         //"Desligando" o angular

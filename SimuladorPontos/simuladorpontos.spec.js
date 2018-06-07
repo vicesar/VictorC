@@ -7,7 +7,6 @@ var Simulador = require('../SimuladorPontos/simuladorpontos.po.js');
 
 
 
-
 describe('SimuladorPontos', function () {
 
     it('Carregar tela de simulador de pontos', function () {
@@ -65,7 +64,6 @@ describe('SimuladorPontos', function () {
         // Aguarda a presença do link de "Meu cadastro" e clica
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
         Home.linkSimulador.click();
-
 
         // Aguarda a div principal da tela e realiza simulação de pontos com o valor de vendas
         browser.wait(Helpers.EC.visibilityOf(Simulador.divSimuladorPontos), 50000);

@@ -8,8 +8,8 @@ var Helpers = require('../helpers.po.js');
     //Variáveis
     var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
     var usuarioLucas = '1039170517';
-    var usuarioSPontos = '1212121304';
-    
+    var usuarioSPontos = '9999999176';
+    var usuarioPAcesso = '1212121304';
 
 
     //Elementos
@@ -56,6 +56,7 @@ var Helpers = require('../helpers.po.js');
         //Váriaveis
         usuarioLucas: usuarioLucas,
         usuarioSPontos: usuarioSPontos,
+        usuarioPAcesso: usuarioPAcesso,
 
 
 

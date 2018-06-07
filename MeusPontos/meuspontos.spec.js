@@ -17,7 +17,6 @@ describe('MeusPontos', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        
         // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioLucas);
@@ -28,13 +27,6 @@ describe('MeusPontos', function () {
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
-
-
-        // Aguarda a presença do ícone do menu lateral e clica
-        // browser.sleep(10000);
-        // Home.btMenu.click();
-        // browser.wait(Helpers.EC.visibilityOf(MeusPontos.linkPontos), 50000);
-        // MeusPontos.linkPontos.click();
 
         browser.sleep(10000);
         Home.saldo.click();
@@ -51,7 +43,6 @@ describe('MeusPontos', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        
         // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioLucas);
@@ -59,7 +50,6 @@ describe('MeusPontos', function () {
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
         Senha.FillSenha(Senha.senhaLucas);
         Senha.btEntrar.click();
-        
         
         // "Desligando" o angular
         LoginPO.OnPrepare(true);

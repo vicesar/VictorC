@@ -12,7 +12,6 @@ describe('MeuCadastro', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
     
-        
         // Realiza login
         LoginPO.Navigate();
         LoginPO.FillEc(LoginPO.usuarioLucas);
@@ -50,13 +49,13 @@ describe('MeuCadastro', function () {
 
         //Realizar "Logout"
         LoginPO.Logout();
+
     });
 
 
     it('Alterar Dados Comerciais do participante', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
-        
         
         // Realiza login
         LoginPO.Navigate();
@@ -68,7 +67,6 @@ describe('MeuCadastro', function () {
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
-
 
         // Aguarda a presença do ícone do menu lateral e clica
         browser.sleep(10000);
@@ -94,6 +92,7 @@ describe('MeuCadastro', function () {
 
         //Realizar "Logout"
         LoginPO.Logout();
+        
     });
 
 

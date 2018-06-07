@@ -6,8 +6,6 @@ var Listagem = require('../ListagemOferta/listagemoferta.po.js');
 
 
 
-
-
 describe('ListagemOferta', function () {
 
     it('Carregar pagina', function () {
@@ -16,17 +14,17 @@ describe('ListagemOferta', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
+        LoginPO.FillEc(LoginPO.usuarioSPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
+        Senha.FillSenha(Senha.senhaSPontos);
         Senha.btEntrar.click();
 
         //"Desligando" o angular
         LoginPO.OnPrepare(true);
 
         //Abre tela de Ofertas
-        browser.sleep(10000);
+        browser.sleep(12000);
         Home.btOferta.click();
 
         //Espera que tenha card

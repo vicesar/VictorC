@@ -9,22 +9,18 @@ var mySelect = new Helpers.SelectWrapper(by.id('quantity'));
 
 
 
-
-
 describe('Lio', function () {
-
 
     it('Contratar a oferta', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 
-
         //Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
+        LoginPO.FillEc(LoginPO.usuarioSPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
+        Senha.FillSenha(Senha.senhaSPontos);
         Senha.btEntrar.click();
 
         //"Desligando" o angular
@@ -39,10 +35,12 @@ describe('Lio', function () {
         Listagem.lio.click();
         
         //Aguarda carregar pagina e clica para contratar oferta
-        browser.sleep(8000);
+        browser.sleep(10000);
         Lio.btquero.click();
-        browser.wait(Helpers.EC.visibilityOf(ListagemEC.campoBusca), 80000);
-        ListagemEC.BuscaEndereco(ListagemEC.endereco);
+        browser.wait(Helpers.EC.visibilityOf(ListagemEC.radioEC), 80000);
+        ListagemEC.radioEC.click();
+        browser.sleep(500);
+        ListagemEC.btEscolher.click();
 
         //Aguarda carregar a classe de selecionar quantidade de maquina e seleciona quantidade
         browser.wait(Helpers.EC.visibilityOf(Lio.classemaq), 10000);

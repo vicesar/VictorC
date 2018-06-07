@@ -8,7 +8,7 @@ var Helpers = require('../helpers.po.js');
 
     //Elementos
     var campoBusca = $('.input.ng-untouched.ng-pristine.ng-valid');
-    var radioEC = element(by.css("label[for='1039170517']"));
+    var radioEC = element(by.css("label[for='9999999176']"));
     var btEscolher = $('.btn.full-green');
 
     //Métodos
@@ -16,10 +16,6 @@ var Helpers = require('../helpers.po.js');
         campoBusca.sendKeys(endereco);
         browser.sleep(500);
         Helpers.enter.perform();
-        browser.sleep(5000);
-        radioEC.click();
-        browser.sleep(500);
-        btEscolher.click();
     };
 
     module.exports = {
@@ -28,7 +24,8 @@ var Helpers = require('../helpers.po.js');
 
         //Elementos
         campoBusca: campoBusca,
-
+        radioEC: radioEC,
+        btEscolher: btEscolher,
         //Métodos
         BuscaEndereco: BuscaEndereco,
 

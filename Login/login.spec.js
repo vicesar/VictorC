@@ -20,10 +20,10 @@ describe('Login', function () {
     it('Realizar login com sucesso', function () {
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
+        LoginPO.FillEc(LoginPO.usuarioSPontos);
         LoginPO.btAcessar.click();
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
+        Senha.FillSenha(Senha.senhaSPontos);
         Senha.btEntrar.click();
 
         //Aguarda a presença do ícone do menu lateral
@@ -48,13 +48,13 @@ describe('Login', function () {
 
         LoginPO.Navigate();
         browser.wait(Helpers.EC.presenceOf(LoginPO.campoEC), 10000);
-        LoginPO.FillEc(LoginPO.usuarioSPontos);
+        LoginPO.FillEc(LoginPO.usuarioPAcesso);
         LoginPO.btAcessar.click();
 
 
         //Aguarda a presença do campo senha
         browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 100000);
-        Senha.FillSenha(Senha.senhaSPontos);
+        Senha.FillSenha(Senha.senhaPAcesso);
         Senha.btEntrar.click();
 
         
