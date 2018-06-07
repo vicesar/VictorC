@@ -9,7 +9,7 @@ var Farol = require('../OfertaFarol/farol.po.js');
 
 
 
-fdescribe('Farol', function () {
+describe('Farol', function () {
 
 
     it('Contratar a oferta', function () {
@@ -29,7 +29,7 @@ fdescribe('Farol', function () {
         LoginPO.OnPrepare(true);
 
         //Abre tela de Ofertas
-        browser.sleep(10000);
+        browser.sleep(12000);
         Home.btOferta.click();
 
         //Aguarda carregamento do botão para contratar oferta e clica

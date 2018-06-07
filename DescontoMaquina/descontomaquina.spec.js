@@ -32,7 +32,7 @@ describe('DescontoMaquina', function () {
         Home.linkDesconto.click();
 
         // Espera apresentar div de listagem de POS
-        browser.wait(Helpers.EC.visibilityOf(DescontoMaquina.divListagemPos), 50000);
+        browser.wait(Helpers.EC.visibilityOf(DescontoMaquina.divListagemPos), 100000);
         expect(DescontoMaquina.divListagemPos.isPresent()).toBe(true);
 
         // "Deslogar"
