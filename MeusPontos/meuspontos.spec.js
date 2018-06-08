@@ -30,7 +30,7 @@ describe('MeusPontos', function () {
 
         browser.sleep(10000);
         Home.saldo.click();
-        browser.wait(Helpers.EC.visibilityOf(MeusPontos.pontosGerais), 50000);
+        browser.wait(Helpers.EC.visibilityOf(MeusPontos.pontosGerais), 100000);
 
         //Espera que apresente classe de Pontos
         expect(MeusPontos.pontosGerais.isPresent()).toBe(true);
@@ -59,7 +59,7 @@ describe('MeusPontos', function () {
         Home.saldo.click();
 
         //Aguardar estar visivel a tela de meus pontos e clicar em "Mais Filtro"
-        browser.wait(Helpers.EC.visibilityOf(MeusPontos.pontosGerais), 50000);
+        browser.wait(Helpers.EC.visibilityOf(MeusPontos.pontosGerais), 100000);
         MeusPontos.maisFiltro.click();
         browser.sleep(8000);
 

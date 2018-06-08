@@ -28,7 +28,7 @@ describe('ListagemOferta', function () {
         Home.btOferta.click();
 
         //Espera que tenha card
-        browser.wait(Helpers.EC.presenceOf(Listagem.card), 10000);
+        browser.wait(Helpers.EC.presenceOf(Listagem.card), 50000);
         expect(Listagem.card.isPresent()).toBe(true);
 
         // "Deslogar"
