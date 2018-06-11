@@ -5,7 +5,6 @@ var Helpers = require('../helpers.po.js');
 
 
 
-
 describe('Login', function () {
 
 
@@ -17,7 +16,7 @@ describe('Login', function () {
         expect(browser.getTitle()).toEqual('Programa Cielo Fidelidade');
     });
 
-    fit('Realizar login com sucesso', function () {
+    it('Realizar login com sucesso', function () {
         // Realiza login
         LoginPO.Navigate();
         LoginPO.PreencherEC(LoginPO.usuarioSPontos);
@@ -38,7 +37,7 @@ describe('Login', function () {
 
     });
 
-    fit('Realizar primeiro acesso com sucesso', function () {
+    it('Realizar primeiro acesso com sucesso', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 

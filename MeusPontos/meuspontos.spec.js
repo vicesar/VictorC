@@ -1,5 +1,3 @@
-//meucadastro.spec.js
-
 var LoginPO = require('../Login/login.po.js');
 var Home = require('../Home/home.po.js');
 var Helpers = require('../helpers.po.js');
@@ -17,11 +15,8 @@ describe('MeusPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
@@ -43,11 +38,8 @@ describe('MeusPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
         
         // "Desligando" o angular
         LoginPO.OnPrepare(true);

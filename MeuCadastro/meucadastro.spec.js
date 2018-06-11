@@ -1,7 +1,7 @@
 var LoginPO = require('../Login/login.po.js');
 var Home = require('../Home/home.po.js');
 var Helpers = require('../helpers.po.js');
-var Senha = require('../Login/senha.po.js')
+var Senha = require('../Login/senha.po.js');
 var MeuCadastro = require('../MeuCadastro/meucadastro.po.js');
 
 
@@ -14,18 +14,14 @@ describe('MeuCadastro', function () {
     
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
+        Senha.PreencherSenha(Senha.senhaSPontos);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
-
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(10000);
+        browser.sleep(12000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica
@@ -38,7 +34,6 @@ describe('MeuCadastro', function () {
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.campoNome), 50000);
         MeuCadastro.FillDataNasc(MeuCadastro.dataNasc);
         MeuCadastro.btnSalvar.click();
-
         
         // Aguarda carregar modal e espera que apresente o botão "Fechar" do modal de sucesso
         browser.wait(Helpers.EC.visibilityOf(MeuCadastro.modal), 50000);
@@ -59,17 +54,14 @@ describe('MeuCadastro', function () {
         
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
+        Senha.PreencherSenha(Senha.senhaSPontos);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(10000);
+        browser.sleep(12000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica

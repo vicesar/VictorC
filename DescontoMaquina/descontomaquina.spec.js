@@ -6,6 +6,7 @@ var DescontoMaquina = require('../DescontoMaquina/descontomaquina.po.js');
 var MeuCadastro = require('../MeuCadastro/meucadastro.po.js');
 
 
+
 describe('DescontoMaquina', function () {
 
     it('Carregar pagina', function () {
@@ -14,11 +15,8 @@ describe('DescontoMaquina', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);

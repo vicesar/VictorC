@@ -14,11 +14,8 @@ describe('ListagemOferta', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioSPontos);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaSPontos);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
+        Senha.PreencherSenha(Senha.senhaSPontos);
 
         //"Desligando" o angular
         LoginPO.OnPrepare(true);

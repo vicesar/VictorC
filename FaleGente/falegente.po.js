@@ -4,7 +4,7 @@
     //Variáveis
 
     //Elementos
-    var faleComGente = $$('.text-link').get(2);
+    var faleComGente = $$('.text-link').get(1);
     var campoNome = $$('.input.ng-untouched.ng-pristine').get(0);
     var campoEmail = $$('.input.ng-untouched.ng-pristine').get(0);
     var campoCPF = $$('.input.ng-untouched.ng-pristine').get(0);

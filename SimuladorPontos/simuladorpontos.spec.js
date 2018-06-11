@@ -15,11 +15,8 @@ describe('SimuladorPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
@@ -31,7 +28,6 @@ describe('SimuladorPontos', function () {
         // Aguarda a presença do link de "Meu cadastro" e clica em "Simulador de pontos"
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
         Home.linkSimulador.click();
-
 
         // Espera a div principal da tela
         browser.wait(Helpers.EC.visibilityOf(Simulador.divSimuladorPontos), 50000);
@@ -48,11 +44,8 @@ describe('SimuladorPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioLucas);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaLucas);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
