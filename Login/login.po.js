@@ -2,6 +2,7 @@ var Home = require('../Home/home.po');
 var Helpers = require('../helpers.po.js');
 
 
+
 (function LoginPO() {
     'use strict';
 
@@ -33,8 +34,10 @@ var Helpers = require('../helpers.po.js');
     };
 
     //Preenche o campo número estabelecimento
-    function FillEc(numEC) {
+    function PreencherEC(numEC) {
+        browser.wait(Helpers.EC.presenceOf(campoEC), 10000);
         campoEC.sendKeys(numEC);
+        btAcessar.click();
     };
 
     //Preenche o campo número estabelecimento
@@ -73,7 +76,7 @@ var Helpers = require('../helpers.po.js');
 
         //Métodos
         Navigate: Navigate,
-        FillEc: FillEc,
+        PreencherEC: PreencherEC,
         Logout: Logout,
 
         OnPrepare: OnPrepare,

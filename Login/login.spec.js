@@ -6,35 +6,31 @@ var Helpers = require('../helpers.po.js');
 
 
 
-
 describe('Login', function () {
 
 
     it('Acessar a página', function () {
+        // Acessa pagina do Cielo Fidelidade
         LoginPO.Navigate();
 
-        //Espera que titulo da página seja 'Programa Cielo Fidelidade'
+        // Espera que titulo da página seja 'Programa Cielo Fidelidade'
         expect(browser.getTitle()).toEqual('Programa Cielo Fidelidade');
     });
 
-    it('Realizar login com sucesso', function () {
+    fit('Realizar login com sucesso', function () {
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.FillEc(LoginPO.usuarioSPontos);
-        LoginPO.btAcessar.click();
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 10000);
-        Senha.FillSenha(Senha.senhaSPontos);
-        Senha.btEntrar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
+        Senha.PreencherSenha(Senha.senhaSPontos);
 
-        //Aguarda a presença do ícone do menu lateral
+        // Aguarda a presença do ícone do menu lateral
         browser.wait(Helpers.EC.presenceOf(Home.btMenu), 50000);
 
-        //"Desligando" o angular
+        // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
         //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
         expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
-
 
         //Realiza logout do site
         LoginPO.Logout();
@@ -42,23 +38,18 @@ describe('Login', function () {
 
     });
 
-    it('Realizar primeiro acesso com sucesso', function () {
-        //"Ligando" o angular
+    fit('Realizar primeiro acesso com sucesso', function () {
+        // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
+        // Preencher campo EC e prossegue
         LoginPO.Navigate();
-        browser.wait(Helpers.EC.presenceOf(LoginPO.campoEC), 10000);
-        LoginPO.FillEc(LoginPO.usuarioPAcesso);
-        LoginPO.btAcessar.click();
+        LoginPO.PreencherEC(LoginPO.usuarioPAcesso);
 
-
-        //Aguarda a presença do campo senha
-        browser.wait(Helpers.EC.presenceOf(Senha.campoSenha), 100000);
-        Senha.FillSenha(Senha.senhaPAcesso);
-        Senha.btEntrar.click();
-
+        // Preenche campo senha e prossegue
+        Senha.PreencherSenha(Senha.senhaPAcesso);
         
-        //Aguarda a presença do checkbox de Li e Concordo com o Regulamento e clicar no botão
+        // Aguarda a presença do checkbox de Li e Concordo com o Regulamento e clicar no botão
         browser.wait(Helpers.EC.visibilityOf(LoginPO.checkRegulamento), 50000);
         LoginPO.checkRegulamento.click();
         LoginPO.btPreencha.click();
@@ -84,6 +75,7 @@ describe('Login', function () {
 
         //Realiza logout do site
         LoginPO.Logout();
+        
     });
 
 

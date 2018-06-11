@@ -1,8 +1,13 @@
+var Helpers = require('../helpers.po.js');
+
+
+
 (function SenhaPO() {
     'use strict';
 
     //Variáveis
 
+    
     //Elementos
     var campoSenha = element(by.id('password'));
     var btEntrar = element(by.id('btAction'));
@@ -14,8 +19,10 @@
     //Métodos
 
     //Preenche o campo senha
-    function FillSenha(senha) {
+    function PreencherSenha(senha) {
+        browser.wait(Helpers.EC.presenceOf(campoSenha), 10000);
         campoSenha.sendKeys(senha);
+        btEntrar.click();
     };
 
 
@@ -31,9 +38,8 @@
         btEntrar: btEntrar,
         
 
-
         //Métodos
-        FillSenha: FillSenha,
+        PreencherSenha: PreencherSenha,
     };
 
 })();
