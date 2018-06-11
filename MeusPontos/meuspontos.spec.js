@@ -9,8 +9,6 @@ var mySelect = new Helpers.SelectWrapper(by.id('transactionCategory'));
 
 
 
-
-
 describe('MeusPontos', function () {
 
     it('Carregar tela de pontos', function () {
