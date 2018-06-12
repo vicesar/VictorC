@@ -3,7 +3,7 @@ var LoginPO = require('../Login/login.po');
 var Helpers = require('../helpers.po.js');
 var mySelect = new Helpers.SelectWrapper(by.id('idAssunto'));
 
-fdescribe('FaleGente', function () {
+describe('FaleGente', function () {
     
     it('Enviar mensagem com sucesso com CPF', function(){
         LoginPO.Navigate();

@@ -32,7 +32,7 @@ describe('MeusPontos', function () {
         LoginPO.Logout();
     });
 
-    it('Filtro de pontos', function () {
+    it('Filtrar exibicao dos pontos', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 

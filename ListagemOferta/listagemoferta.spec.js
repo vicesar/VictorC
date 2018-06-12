@@ -8,7 +8,7 @@ var Listagem = require('../ListagemOferta/listagemoferta.po.js');
 
 describe('ListagemOferta', function () {
 
-    it('Carregar pagina', function () {
+    it('Verificar carregamento de card', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 

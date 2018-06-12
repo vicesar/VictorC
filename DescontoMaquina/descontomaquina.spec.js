@@ -9,7 +9,7 @@ var MeuCadastro = require('../MeuCadastro/meucadastro.po.js');
 
 describe('DescontoMaquina', function () {
 
-    it('Carregar pagina', function () {
+    it('Verificar carregamento da listagem de POs', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
