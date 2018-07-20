@@ -10,7 +10,8 @@
     var linkSimulador = $$('.hl-nav-primary li > a').get(5);
     var linkDesconto = $$('.hl-nav-primary li > a').get(7);
     var saldo = $('.balance-point.strong.text-blue');
-    var btOferta = $$('.active').get(4);
+    var btOferta = element(by.css("img[src='/assets/images/sprites/icones/header-menu/menu/ofertas-cielo.svg']"));
+    //var btOferta = $$('.active').get(4);
 
 
     //Métodos

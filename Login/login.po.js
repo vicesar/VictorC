@@ -7,7 +7,7 @@ var Helpers = require('../helpers.po.js');
     'use strict';
 
     //Variáveis
-    var acessoLogin = "http://cielofidelidadedev.azurewebsites.net/home/login";
+    var acessoLogin = "http://cielofidelidadehml.azurewebsites.net/home/login";
     var usuarioLucas = '1039170517';
     var usuarioSPontos = '9999999176';
     var usuarioPAcesso = '1212121304';

@@ -7,7 +7,7 @@ var Farol = require('../OfertaFarol/farol.po.js');
 
 
 
-describe('Farol', function () {
+fdescribe('Farol', function () {
 
     it('Contratar a oferta', function () {
         // "Ligando" o angular
@@ -15,8 +15,8 @@ describe('Farol', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
-        Senha.PreencherSenha(Senha.senhaSPontos);
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
@@ -26,24 +26,20 @@ describe('Farol', function () {
         Home.btOferta.click();
 
         // Aguarda carregamento do botão para contratar oferta e clica
-        browser.wait(Helpers.EC.visibilityOf(Listagem.farol), 10000);
+        browser.wait(Helpers.EC.elementToBeClickable(Listagem.farol), 10000);
         Listagem.farol.click();
         
         // Aguarda carregar classe de video e clica em conheca os planos
-        browser.sleep(10000);
+        browser.wait(Helpers.EC.visibilityOf(Farol.btplanos));
         Farol.btplanos.click();
-        
-        // Aguarda presenca de botao de contrata agora e clica
-        browser.wait(Helpers.EC.elementToBeClickable(Farol.btcontratar), 10000);
-        Farol.btcontratar.click();
 
         // Aguarda e clicar no checkbox
         browser.wait(Helpers.EC.elementToBeClickable(Farol.checkLi), 10000);
         Farol.checkLi.click();
 
         // Aguarda botao Continuar estar habilitado
-        browser.wait(Helpers.EC.elementToBeClickable(Farol.btcontinuar), 10000);
-        Farol.btcontinuar.click();
+        browser.wait(Helpers.EC.elementToBeClickable(Farol.btcontratar), 10000);
+        Farol.btcontratar.click();
        
         // Espera carregar botao fechar de modal de sucesso
         browser.wait(Helpers.EC.visibilityOf(Farol.btfechar), 10000);

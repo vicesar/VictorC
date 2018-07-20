@@ -6,7 +6,7 @@ exports.config = {
         { 'browserName': 'chrome', maxInstances: 1 },
     ],
 
-    baseUrl: 'http://cielofidelidadedev.azurewebsites.net',
+    baseUrl: 'http://cielofidelidadehml.azurewebsites.net',
     //
     //Define os specs a serem testados
     specs: [

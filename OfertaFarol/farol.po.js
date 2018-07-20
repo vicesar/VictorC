@@ -6,7 +6,8 @@
 
     //Elementos
     var video = $('.play-video');
-    var btplanos = $$('.btn.full-green').get(0);
+    var btplanos = element(by.id('btnRedirectStore'));
+    // var btplanos = $$('.btn.full-green').get(0);
     // var planos = element(by.id('btnRedirectStore'));
     var btcontratar = element(by.id('saveContract00'));
     var checkLi = element(by.css("label[for='relevancia']"));
