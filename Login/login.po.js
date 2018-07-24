@@ -2,7 +2,6 @@ var Home = require('../Home/home.po');
 var Helpers = require('../helpers.po.js');
 
 
-
 (function LoginPO() {
     'use strict';
 

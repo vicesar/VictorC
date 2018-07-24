@@ -7,7 +7,7 @@ var Farol = require('../OfertaFarol/farol.po.js');
 
 
 
-fdescribe('Farol', function () {
+describe('Farol', function () {
 
     it('Contratar a oferta', function () {
         // "Ligando" o angular
@@ -15,8 +15,8 @@ fdescribe('Farol', function () {
 
         // Realiza login
         LoginPO.Navigate();
-        LoginPO.PreencherEC(LoginPO.usuarioLucas);
-        Senha.PreencherSenha(Senha.senhaLucas);
+        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
+        Senha.PreencherSenha(Senha.senhaSPontos);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);

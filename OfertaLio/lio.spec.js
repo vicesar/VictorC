@@ -34,26 +34,18 @@ describe('Lio', function () {
         // Aguarda carregar pagina e clica para contratar oferta
         browser.sleep(10000);
         Lio.btquero.click();
-        browser.wait(Helpers.EC.visibilityOf(ListagemEC.radioEC), 80000);
-        ListagemEC.radioEC.click();
-        browser.sleep(500);
-        ListagemEC.btEscolher.click();
 
         // Aguarda carregar a classe de selecionar quantidade de maquina e seleciona quantidade
-        browser.wait(Helpers.EC.visibilityOf(Lio.classemaq), 10000);
+        browser.wait(Helpers.EC.visibilityOf(Lio.combomaq), 10000);
         mySelect.selectByValue('1');
+
+        // Aguarda checkbox de Li e concordo e flegar
+        browser.wait(Helpers.EC.elementToBeClickable(Lio.checkli), 10000);
+        Lio.checkli.click();
 
         // Aguarda botão Concluir estar habilitado para clicar
         browser.wait(Helpers.EC.elementToBeClickable(Lio.btconcluir), 10000);
         Lio.btconcluir.click();
-        
-        // Aguarda carregar classe de tela de regulamento
-        browser.wait(Helpers.EC.elementToBeClickable(Lio.checkli), 10000);
-        Lio.checkli.click();
-
-        // Aguarda botão Continuar habilitar e clica
-        browser.wait(Helpers.EC.elementToBeClickable(Lio.btcontinuar, 10000));
-        Lio.btcontinuar.click();
 
         // Aguarda botão fechar do modal de sucesso
         browser.wait(Helpers.EC.visibilityOf(Lio.btfechar), 10000);

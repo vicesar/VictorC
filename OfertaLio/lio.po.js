@@ -6,7 +6,8 @@
 
     //Elementos
     var btquero = element(by.id('btn-click'));
-    var classemaq = $('.qtd-machines-content');
+    //var classemaq = $('.qtd-machines-content');
+    var combomaq = element(by.id('quantity'));
     var btconcluir = element(by.id('hire'));
     var classereg = $('.regulation-contract-title');
     var checkli = element(by.css("label[for='relevancia']"));
@@ -22,7 +23,8 @@
 
         //Elementos
         btquero: btquero,
-        classemaq: classemaq,
+        //classemaq: classemaq,
+        combomaq: combomaq,
         btconcluir: btconcluir,
         classereg: classereg,
         checkli: checkli,
