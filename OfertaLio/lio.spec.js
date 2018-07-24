@@ -36,8 +36,12 @@ fdescribe('Lio', function () {
         Lio.btquero.click();
 
         // Aguarda carregar
-        browser.wait(Helpers.EC.visibilityOf(ListagemEC.btEscolher), 50000);
+        // browser.wait(Helpers.EC.visibilityOf(ListagemEC.btEscolher), 50000);
+        // ListagemEC.radioEC.click();
+        browser.sleep(10000);
         ListagemEC.radioEC.click();
+        browser.sleep(500);
+        ListagemEC.btEscolher.click();
 
         // Aguarda carregar a classe de selecionar quantidade de maquina e seleciona quantidade
         browser.wait(Helpers.EC.visibilityOf(Lio.combomaq), 50000);
