@@ -9,7 +9,7 @@ var mySelect = new Helpers.SelectWrapper(by.id('quantity'));
 
 
 
-describe('Lio', function () {
+fdescribe('Lio', function () {
 
     it('Contratar a oferta', function () {
         // "Ligando" o angular
@@ -28,15 +28,19 @@ describe('Lio', function () {
         Home.btOferta.click();
 
         // Aguarda carregamento do botão para contratar oferta e clica
-        browser.wait(Helpers.EC.presenceOf(Listagem.lio), 10000);
+        browser.wait(Helpers.EC.presenceOf(Listagem.lio), 50000);
         Listagem.lio.click();
         
         // Aguarda carregar pagina e clica para contratar oferta
-        browser.sleep(10000);
+        browser.sleep(12000);
         Lio.btquero.click();
 
+        // Aguarda carregar
+        browser.wait(Helpers.EC.visibilityOf(ListagemEC.btEscolher), 50000);
+        ListagemEC.radioEC.click();
+
         // Aguarda carregar a classe de selecionar quantidade de maquina e seleciona quantidade
-        browser.wait(Helpers.EC.visibilityOf(Lio.combomaq), 10000);
+        browser.wait(Helpers.EC.visibilityOf(Lio.combomaq), 50000);
         mySelect.selectByValue('1');
 
         // Aguarda checkbox de Li e concordo e flegar
