@@ -18,6 +18,13 @@ var Helpers = require('../helpers.po.js');
         Helpers.enter.perform();
     };
 
+    function EscolhaEC(){
+        browser.sleep(10000);
+        radioEC.click();
+        browser.sleep(500);
+        btEscolher.click();
+    };
+
     module.exports = {
         //Váriaveis
         endereco: endereco,
@@ -28,6 +35,7 @@ var Helpers = require('../helpers.po.js');
         btEscolher: btEscolher,
         //Métodos
         BuscaEndereco: BuscaEndereco,
+        EscolhaEC: EscolhaEC,
 
     };
 
