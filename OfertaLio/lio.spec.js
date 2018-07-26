@@ -15,8 +15,14 @@ fdescribe('Lio', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        // Realiza login
+        // Acessa pagina
         LoginPO.Navigate();
+
+        // Bloquea Push
+        browser.sleep(10000);
+        LoginPO.BloquearPush();
+
+        // Realizar login
         LoginPO.PreencherEC(LoginPO.usuarioSPontos);
         Senha.PreencherSenha(Senha.senhaSPontos);
 
@@ -24,7 +30,7 @@ fdescribe('Lio', function () {
         LoginPO.OnPrepare(true);
 
         // Abre tela de Ofertas
-        browser.sleep(10000);
+        browser.sleep(12000);
         Home.btOferta.click();
 
         // Aguarda carregamento do botão para contratar oferta e clica

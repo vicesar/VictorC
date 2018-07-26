@@ -15,13 +15,13 @@ var Helpers = require('../helpers.po.js');
     //Elementos
     var campoEC = element(by.id('estabilishmentNumber'));
     var btAcessar = element(by.id('btContinue'));
-    //var checkRegulamento = $$('.ng-tns-c13-1').get(3);
     var checkRegulamento = element(by.css("label[for='regulamento']"));
     var btPreencha = $('.btn.stroke');
     var btPronto = $('.btn.submit.stroke');
     var btVamos = $('.btn.full-green');
     var btFechar = $('.text-link');
     var headerLogin = $('.center.flexbox-rowwrap');
+    var btNao = element(by.id('onesignal-popover-cancel-button'));
 
 
     //Métodos
@@ -30,6 +30,15 @@ var Helpers = require('../helpers.po.js');
     function Navigate() {
         browser.get(acessoLogin);
         browser.wait(Helpers.EC.presenceOf(headerLogin), 10000);
+    };
+
+    //Acessa página da Cielo
+    function BloquearPush() {
+    btNao.isPresent().then(function(result) {
+        if ( result ) {
+            btNao.click();
+        }
+    });
     };
 
     //Preenche o campo número estabelecimento
@@ -65,7 +74,6 @@ var Helpers = require('../helpers.po.js');
         //Elementos
         btAcessar: btAcessar,
         campoEC: campoEC,
-        //btMenu: btMenu,
         checkRegulamento: checkRegulamento,
         btPreencha: btPreencha,
         btPronto: btPronto,
@@ -75,6 +83,7 @@ var Helpers = require('../helpers.po.js');
 
         //Métodos
         Navigate: Navigate,
+        BloquearPush: BloquearPush,
         PreencherEC: PreencherEC,
         Logout: Logout,
 
