@@ -11,9 +11,14 @@ describe('MeuCadastro', function () {
     it('Alterar Dados Pessoais do participante', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
-    
-        // Realiza login
+
+        // Acessa pagina
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        //Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioSPontos);
         Senha.PreencherSenha(Senha.senhaSPontos);
 

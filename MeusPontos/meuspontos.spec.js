@@ -13,15 +13,20 @@ describe('MeusPontos', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        // Realiza login
+        // Acessa pagina
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
-        browser.sleep(10000);
+        browser.sleep(20000);
         Home.saldo.click();
         browser.wait(Helpers.EC.visibilityOf(MeusPontos.pontosGerais), 100000);
 

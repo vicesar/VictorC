@@ -9,7 +9,7 @@ var mySelect = new Helpers.SelectWrapper(by.id('quantity'));
 
 
 
-fdescribe('Lio', function () {
+describe('Lio', function () {
 
     it('Contratar a oferta', function () {
         // "Ligando" o angular
@@ -19,7 +19,6 @@ fdescribe('Lio', function () {
         LoginPO.Navigate();
 
         // Bloquea Push
-        browser.sleep(10000);
         LoginPO.BloquearPush();
 
         // Realizar login

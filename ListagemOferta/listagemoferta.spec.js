@@ -12,10 +12,15 @@ describe('ListagemOferta', function () {
         //"Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        // Realiza login
+        // Acessa pagina
         LoginPO.Navigate();
-        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
-        Senha.PreencherSenha(Senha.senhaSPontos);
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        //Realiza Login
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         //"Desligando" o angular
         LoginPO.OnPrepare(true);

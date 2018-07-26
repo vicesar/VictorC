@@ -22,6 +22,8 @@ var Helpers = require('../helpers.po.js');
     var btFechar = $('.text-link');
     var headerLogin = $('.center.flexbox-rowwrap');
     var btNao = element(by.id('onesignal-popover-cancel-button'));
+    //var btNao = $('.align-right.secondary.popover-button');
+    //var btNao = $$('.align-right.secondary.popover-button').get(0);
 
 
     //Métodos
@@ -35,7 +37,9 @@ var Helpers = require('../helpers.po.js');
     //Acessa página da Cielo
     function BloquearPush() {
     btNao.isPresent().then(function(result) {
-        if ( result ) {
+        if ( result === true ) {
+            //browser.wait(Helpers.EC.elementToBeClickable(btNao), 50000);
+            browser.sleep(7000);
             btNao.click();
         }
     });
@@ -43,8 +47,10 @@ var Helpers = require('../helpers.po.js');
 
     //Preenche o campo número estabelecimento
     function PreencherEC(numEC) {
+        browser.wait(Helpers.EC.invisibilityOf(btNao), 10000);
         browser.wait(Helpers.EC.presenceOf(campoEC), 10000);
         campoEC.sendKeys(numEC);
+        browser.wait(Helpers.EC.elementToBeClickable(btAcessar));
         btAcessar.click();
     };
 

@@ -13,8 +13,13 @@ describe('SimuladorPontos', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        // Realiza login
+        // Acessa pagina
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 

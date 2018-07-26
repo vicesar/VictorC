@@ -12,9 +12,14 @@ describe('Recarga', function () {
     it('Contratar a oferta', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
+
+        // Acessa pagina
+        LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
         
         // Realiza login
-        LoginPO.Navigate();
         LoginPO.PreencherEC(LoginPO.usuarioSPontos);
         Senha.PreencherSenha(Senha.senhaSPontos);
 

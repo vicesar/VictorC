@@ -13,8 +13,14 @@ describe('DescontoMaquina', function () {
         // "Ligando" o angular
         LoginPO.OnPrepare(false);
 
-        // Realiza login
+        // Acessa pagina
         LoginPO.Navigate();
+
+        // Bloquea Push
+        browser.sleep(10000);
+        LoginPO.BloquearPush();
+
+        //Realiza Login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 

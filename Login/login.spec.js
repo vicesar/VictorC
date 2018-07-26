@@ -17,10 +17,18 @@ describe('Login', function () {
     });
 
     it('Realizar login com sucesso', function () {
-        // Realiza login
+        // "Ligando" o angular
+        LoginPO.OnPrepare(false);
+
+        // Acessa pagina
         LoginPO.Navigate();
-        LoginPO.PreencherEC(LoginPO.usuarioSPontos);
-        Senha.PreencherSenha(Senha.senhaSPontos);
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        //Realiza Login
+        LoginPO.PreencherEC(LoginPO.usuarioLucas);
+        Senha.PreencherSenha(Senha.senhaLucas);
 
         // Aguarda a presença do ícone do menu lateral
         browser.wait(Helpers.EC.presenceOf(Home.btMenu), 50000);
@@ -43,6 +51,11 @@ describe('Login', function () {
 
         // Preencher campo EC e prossegue
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        // Preenche campo de EC e prosseguer
         LoginPO.PreencherEC(LoginPO.usuarioPAcesso);
 
         // Preenche campo senha e prossegue
