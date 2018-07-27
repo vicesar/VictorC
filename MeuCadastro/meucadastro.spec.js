@@ -44,10 +44,10 @@ describe('MeuCadastro', function () {
         browser.wait(Helpers.EC.visibilityOf(MeuCadastro.modal), 50000);
         expect(MeuCadastro.btnFechar.isPresent()).toBe(true);
 
-        //Clica no botão "Fechar"
+        // Clica no botão "Fechar"
         MeuCadastro.btnFechar.click();
 
-        //Realizar "Logout"
+        // Realizar "Logout"
         LoginPO.Logout();
 
     });
@@ -59,6 +59,12 @@ describe('MeuCadastro', function () {
         
         // Realiza login
         LoginPO.Navigate();
+
+        // Bloquea Push
+        browser.sleep(10000);
+        LoginPO.BloquearPush();
+
+        // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioSPontos);
         Senha.PreencherSenha(Senha.senhaSPontos);
 
@@ -84,10 +90,10 @@ describe('MeuCadastro', function () {
         browser.wait(Helpers.EC.visibilityOf(MeuCadastro.modal), 50000);
         expect(MeuCadastro.btnFechar.isPresent()).toBe(true);
 
-        //Clica no botão "Fechar"
+        // Clica no botão "Fechar"
         MeuCadastro.btnFechar.click();
 
-        //Realizar "Logout"
+        // Realizar "Logout"
         LoginPO.Logout();
         
     });

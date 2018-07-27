@@ -17,6 +17,7 @@ describe('SimuladorPontos', function () {
         LoginPO.Navigate();
 
         // Bloquea Push
+        browser.sleep(10000);
         LoginPO.BloquearPush();
 
         // Realiza login
@@ -27,7 +28,6 @@ describe('SimuladorPontos', function () {
         LoginPO.OnPrepare(true);
 
         // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(10000);
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica em "Simulador de pontos"
@@ -49,6 +49,11 @@ describe('SimuladorPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 

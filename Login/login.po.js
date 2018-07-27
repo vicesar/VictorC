@@ -36,10 +36,11 @@ var Helpers = require('../helpers.po.js');
 
     //Acessa página da Cielo
     function BloquearPush() {
+    browser.sleep(7000);
     btNao.isPresent().then(function(result) {
         if ( result === true ) {
             //browser.wait(Helpers.EC.elementToBeClickable(btNao), 50000);
-            browser.sleep(7000);
+            //browser.sleep(7000);
             btNao.click();
         }
     });

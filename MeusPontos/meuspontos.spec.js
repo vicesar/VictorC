@@ -43,6 +43,11 @@ describe('MeusPontos', function () {
 
         // Realiza login
         LoginPO.Navigate();
+
+        // Bloquea Push
+        LoginPO.BloquearPush();
+
+        // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
         

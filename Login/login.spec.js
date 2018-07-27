@@ -5,7 +5,7 @@ var Helpers = require('../helpers.po.js');
 
 
 
-describe('Login', function () {
+fdescribe('Login', function () {
 
 
     it('Acessar a página', function () {
@@ -36,8 +36,8 @@ describe('Login', function () {
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
-        //Espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
-        expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
+        //Espera que URL seja 'https://cielofidelidadehml.azurewebsites.net/dashboard'
+        expect(browser.getCurrentUrl()).toEqual('https://cielofidelidadehml.azurewebsites.net/dashboard');
 
         //Realiza logout do site
         LoginPO.Logout();
@@ -66,26 +66,26 @@ describe('Login', function () {
         LoginPO.checkRegulamento.click();
         LoginPO.btPreencha.click();
 
-        //"Desligando" o angular
+        // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
-        //Aguarda a presença do botão Pronto e clicar no botão
+        // Aguarda a presença do botão Pronto e clicar no botão
         browser.wait(Helpers.EC.presenceOf(LoginPO.btPronto), 50000);
         LoginPO.btPronto.click();
 
         //Aguarda a presença do botão Vamos e clicar no botão
-        browser.wait(Helpers.EC.presenceOf(LoginPO.btVamos), 50000);
+        browser.wait(Helpers.EC.elementToBeClickable(LoginPO.btVamos), 50000);
         LoginPO.btVamos.click();
 
-        //Aguarda a presença do botão Fechar e clicar no botão
-        browser.wait(Helpers.EC.presenceOf(LoginPO.btFechar), 50000);
+        // Aguarda a presença do botão Fechar e clicar no botão
+        //browser.wait(Helpers.EC.elementToBeClickable(LoginPO.btFechar), 50000);
         LoginPO.btFechar.click();
 
-        //Aguarda a presença do ícone do menu lateral e espera que URL seja 'http://cielofidelidadedev.azurewebsites.net/dashboard'
-        browser.wait(Helpers.EC.urlIs('http://cielofidelidadedev.azurewebsites.net/dashboard'), 50000);
-        expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadedev.azurewebsites.net/dashboard');
+        // Aguarda a presença do ícone do menu lateral e espera que URL seja 'http://cielofidelidadehml.azurewebsites.net/dashboard'
+        browser.wait(Helpers.EC.urlIs('http://cielofidelidadehml.azurewebsites.net/dashboard'), 50000);
+        expect(browser.getCurrentUrl()).toEqual('http://cielofidelidadehml.azurewebsites.net/dashboard');
 
-        //Realiza logout do site
+        // Realiza logout do site
         LoginPO.Logout();
         
     });
