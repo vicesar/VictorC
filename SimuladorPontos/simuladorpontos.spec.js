@@ -17,17 +17,21 @@ describe('SimuladorPontos', function () {
         LoginPO.Navigate();
 
         // Bloquea Push
-        browser.sleep(10000);
         LoginPO.BloquearPush();
 
         // Realiza login
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 
+
+        browser.sleep(10000);
+        // Aguarda a presença do ícone do menu lateral
+        browser.wait(Helpers.EC.presenceOf(Home.btMenu), 50000);
+
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
 
-        // Aguarda a presença do ícone do menu lateral e clica
+        // Clica no menu lateral
         Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica em "Simulador de pontos"
@@ -57,12 +61,12 @@ describe('SimuladorPontos', function () {
         LoginPO.PreencherEC(LoginPO.usuarioLucas);
         Senha.PreencherSenha(Senha.senhaLucas);
 
+        // Aguarda a presença do ícone do menu lateral
+        browser.wait(Helpers.EC.presenceOf(Home.btMenu), 50000);
+        Home.btMenu.click();
+
         // "Desligando" o angular
         LoginPO.OnPrepare(true);
-
-        // Aguarda a presença do ícone do menu lateral e clica
-        browser.sleep(10000);
-        Home.btMenu.click();
 
         // Aguarda a presença do link de "Meu cadastro" e clica
         browser.wait(Helpers.EC.presenceOf(MeuCadastro.linkCadastro), 50000);
